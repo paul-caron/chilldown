@@ -17,21 +17,6 @@ MARKDOWN!
 - two
 - three
 
-###codeBlock
-```cpp
-#include &lt; iostream &gt; 
-#include &lt; markdown &gt; 
-
-function helloWorld(){
-    while(1){
-        std::cout &lt;&lt; "What am I "
-                     "supposed "
-                     "to say. "
-                     "Sorry, "
-                     "I forgot.";
-    }
-}
-```
 &copy Paul Caron , aka ChillPill
 
 `

@@ -65,7 +65,7 @@ function parseLine(str){
     }
     return str
 }
-exports.downToHTML = function(down){
+module.exports.downToHTML = function(down){
     let lines=down.split("\n")
     let text=lines.map((line)=>parseLine(line))
     return text.join("")
