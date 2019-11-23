@@ -1,0 +1,43 @@
+body {
+    
+}
+
+textarea{
+    width:100vw;
+    height:50vh;
+}
+
+pre{
+    background-color:black;
+    padding:15px 15px 15px 15px;
+}
+
+
+code{
+    color:white;
+    animation:blink 10s infinite;
+    font-family:IBM Plex Mono,courier,monospace;
+}
+
+@keyframes blink{
+    0%{
+        color:white;
+    }
+    25%{
+        color:yellow;
+    }
+    50%{
+        color:lime;
+    }
+    75%{
+        color:cyan;
+    }
+}
+
+h1,h2,h3{
+    margin-bottom:0;
+}
+
+hr{
+    margin-top:0;
+}
