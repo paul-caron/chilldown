@@ -8,7 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paul-caron/chilldown.js.git"
+    "url": "git+https://github.com/paul-caron/chilldown.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/paul-caron"
   },
   "keywords": [
     "markdown",
@@ -17,7 +20,7 @@
   "author": "Paul Caron",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/paul-caron/chilldown.js/issues"
+    "url": "https://github.com/paul-caron/chilldown/issues"
   },
   "homepage": "https://github.com/paul-caron/chilldown.js#readme"
 }
