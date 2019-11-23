@@ -1,6 +1,6 @@
+function chilldown(){
 let codeBlock = false
 let blockBuf = ""
-let listBuf =""
 function parseLine(str){
     if(str.search(/^```/)!=-1){
         if(!codeBlock){
@@ -54,25 +54,23 @@ function parseLine(str){
         str = str.replace(new RegExp("^\\s*-"), "<li>")
         str = str+"</li>"
     }
+    if(str.search(new RegExp("^\\s*$"))!=-1){
+        str="<br>"
+    }
     }else{
         codeBuf += str+"<br>"
         str=""
     }
     return str
 }
-
-
-onload=()=>{
-    convert()
+function downToHTML(down){
+    let lines=down.split("\n")
+    let text=lines.map((line)=>parseLine(line))
+    return text.join("")
 }
 
-function convert(){
-    let text = document.querySelector("#md").value.split("\n")
-    text=text.map((line)=>{return parseLine(line)})
-    document.querySelector("#marked").innerHTML=`
-     ${text.join("")}`
+return {downToHTML}
 }
-
 
 
 
