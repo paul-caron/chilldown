@@ -1,4 +1,3 @@
-function chilldown(){
 let codeBlock = false
 let blockBuf = ""
 function parseLine(str){
@@ -22,12 +21,15 @@ function parseLine(str){
     if ((index=str.search(regH1))!=-1){
         str=str.replace(new RegExp("#"),"<h1>")
         str=str+"</h1><hr>"
+        return str
     }else if ((index=str.search(regH2))!=-1){
         str=str.replace(new RegExp("##"),"<h2>")
         str=str+"</h2><hr>"
+        return str
     }else if ((index=str.search(regH3))!=-1){
         str=str.replace(new RegExp("###"),"<h3>")
         str=str+"</h3><hr>"
+        return str
     }
     //check for images
     const regImg = new RegExp("!\\[[^\\(\\)]*\\]\\([^\\[\\]]+\\)")
@@ -44,7 +46,7 @@ function parseLine(str){
         str = str.replace(regA, `<a href="${url}">${text}</a>`)
     }
     //check if paragraph
-    const regP = new RegExp("^\\s*[^#-]")
+    const regP = new RegExp("^\\s*[^#-]+")
     if ((index=str.search(regP))!=-1){
         str = "<p>"+str+"</p>"
     }
@@ -63,14 +65,13 @@ function parseLine(str){
     }
     return str
 }
-function downToHTML(down){
+exports.downToHTML = function(down){
     let lines=down.split("\n")
     let text=lines.map((line)=>parseLine(line))
     return text.join("")
 }
 
-return {downToHTML}
-}
+
 
 
 

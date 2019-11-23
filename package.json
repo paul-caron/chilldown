@@ -1,0 +1,23 @@
+{
+  "name": "chilldown",
+  "version": "1.0.0",
+  "description": "markdown to html converter",
+  "main": "chilldown.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-caron/chilldown.js.git"
+  },
+  "keywords": [
+    "markdown",
+    "html"
+  ],
+  "author": "Paul Caron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paul-caron/chilldown.js/issues"
+  },
+  "homepage": "https://github.com/paul-caron/chilldown.js#readme"
+}
